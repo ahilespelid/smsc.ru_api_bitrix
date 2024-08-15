@@ -20,5 +20,7 @@ if(isset($_GET['info'])): ?>
 </table>
 <? exit; endif; 
 
-pa([$smsc->result('send', [['phones'=>'79897004820,+79282294086;+7 903 401 1822', 'mes' => ['txt' => 'создал процедуру prefix(symbols, lenght) выдаёт результат {{prefix}}', 'let' => ['prefix' => prefix(10)]]]])],1);
-pa($smsc->send(['phones'=>'79897004820,+79282294086;+7 903 401 1822', 'mes' => ['txt' => 'сообщение из класса SMSC {{name}} {{varDontLet}}{{varDontLet1}} {{varDontLet2}} ', 'let' => ['name' => 'тег замены']]]));
+//pa([$smsc->result('send', [['phones'=>'79897004820,+79282294086;+7 903 401 1822', 'mes' => ['txt' => 
+//'изменил логику инициализации классса поля login и pws не обязательные в классе, но обязательные в методе {{method}}, также создал процедуру {{procedura}} генерации 16 байтового ключа Microsoft по стандларту GUID {{GUID}}', 
+//'let' => ['method' => 'send', 'procedura' => 'com_create_guid', 'GUID' => GUID()]]]])],1);
+//pa($smsc->send(['phones'=>'79897004820,+79282294086;+7 903 401 1822', 'mes' => ['txt' => 'сообщение из класса SMSC {{name}} {{varDontLet}}{{varDontLet1}} {{varDontLet2}} ', 'let' => ['name' => 'тег замены']]]));

@@ -128,4 +128,14 @@ if(!function_exists('prefix')){function prefix(int $length = 5, bool $upcase = t
     $ret = ''; for($i=0;$i<$length;$i++){$ret.= chr($simbols[array_rand($simbols)]);}
 return $ret;}}
 
+///*/ahilespelid Функция возвращает guid///*/
+if(!function_exists('com_create_guid')){function com_create_guid(){
+    $data = openssl_random_pseudo_bytes(16);
+    $data[6] = chr(ord($data[6]) & 0x0f | 0x40);
+    $data[8] = chr(ord($data[8]) & 0x3f | 0x80);
+return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));}}
+
+///*/ahilespelid Функция возвращает GUID///*/
+if(!function_exists('GUID')){function GUID(){return strtoupper(com_create_guid());}}
+
 ///*/ahilespelid///*/
